@@ -39,6 +39,6 @@ with open(filename, "wb") as f:
 home_upload = minio_upload(config_dict, filename, "HOME")
 
 # Send Telegram report
-_ = send_telegram_report(config_dict, "IMF GMM", "1", mail_result, home_upload)
+_ = send_telegram_report(config, "IMF GMM", "1", mail_result, home_upload)
 
 os.remove(filename)
