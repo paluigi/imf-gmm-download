@@ -6,7 +6,7 @@ def send_telegram_report(
     config: dict, chain: str, records: int, cloud_upload: bool, home_upload: bool
 ) -> requests.models.Response:
     """Function to send scraping report on Telegram"""
-    message = "{}.\nAcquired {} prices.\nMail: {}\nHome upload: {}".format(
+    message = "{}.\nAcquired {} file.\nMail: {}\nHome upload: {}".format(
         chain, records, cloud_upload, home_upload
     )
     response = requests.post(
